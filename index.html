@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Interactive card details form</title>
+  </head>
+  <body>
+    <div class="grid_container">
+      <div class="grid_container-column_background">
+        <picture class="grid_picture">
+          <source
+            media="(min-width:650px)"
+            srcset="./images/bg-main-desktop.png"
+          />
+          <source
+            media="(max-width:465px)"
+            srcset="./images/bg-main-mobile.png"
+          />
+          <img src="./images/bg-main-mobile.png" alt="background" />
+        </picture>
+        <div class="card_images">
+          <div class="image-front">
+            <img src="./images/bg-card-front.png" alt="front-card" />
+            <img src="./images/card-logo.svg" alt="logo" class="logo" />
+            <h2 id="card-num">0000 0000 0000 0000</h2>
+            <div class="name-date">
+              <span id="name">ali</span>
+              <span id="date"
+                ><span id="year"></span>/<span id="month"></span
+              ></span>
+            </div>
+          </div>
+          <div>
+            <img src="./images/bg-card-back.png" alt="back-card" />
+          </div>
+        </div>
+      </div>
+      <div class="grid_container-column_form">
+        <form>
+          <div class="card-nam">
+            <label for="card-name">cardholder name</label>
+            <input
+              type="text"
+              id="card-name"
+              placeholder="e.g. Jane Appleseed"
+              required
+            />
+          </div>
+          <div class="card-num">
+            <label for="card-number">card number</label>
+            <input
+              type="text"
+              id="card-number"
+              maxlength="16"
+              placeholder="e.g. 1234 5678 9123 0000"
+              required
+            />
+          </div>
+          <div class="date">
+            <label for="date">exp.date (mm/yy)</label>
+            <div>
+              <input
+                type="number"
+                maxlength="2"
+                id="date-month"
+                placeholder="MM"
+                required
+              />
+              <input
+                type="number"
+                maxlength="2"
+                id="date-year"
+                placeholder="YY"
+                required
+              />
+            </div>
+          </div>
+          <div class="cvc">
+            <label for="cvc">cvc</label>
+            <input type="number" id="cvc" placeholder="e.g. 123" required />
+          </div>
+          <button class="sumbit-btn" type="submit">Confirm</button>
+        </form>
+      </div>
+      <div class="grid_container-column-complete hidden">
+        <img src="./images/icon-complete.svg" alt="icon" />
+        <h2>Thank you!</h2>
+        <p>We've added your card details</p>
+        <button id="continue">Continue</button>
+      </div>
+    </div>
+
+    <!-- Completed state start -->
+
+    <script src="./dist/main.js"></script>
+  </body>
+</html>
